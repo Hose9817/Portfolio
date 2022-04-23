@@ -1,0 +1,38 @@
+.skill {
+  &__title {
+    text-align: center;
+    position: relative;
+    @include before_circle;
+    &:before {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  &__subtitle {
+    text-align: center;
+  }
+  &__block {
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(270px, auto));
+    grid-template-rows: repeat(2, minmax(270px, auto));
+    gap: 13px;
+  }
+  &__item {
+    padding: 30px;
+    border: 1px solid #000000;
+    &-icon{
+      height: 65px;
+      max-width: 160px;
+      //width: 160px;
+      margin-bottom: 20px;
+    }
+    &-title {
+      margin-bottom: 15px;
+    }
+    &-descr {
+      font-size: 12px;
+      line-height: 18px;
+    }
+  }
+}
