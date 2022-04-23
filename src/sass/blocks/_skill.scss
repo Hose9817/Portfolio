@@ -36,3 +36,44 @@
     }
   }
 }
+.progress {
+  &__block {
+    margin: 120px 0;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(350px, auto));
+    grid-template-rows: repeat(2, minmax(70px, auto));
+    column-gap: 45px;
+    row-gap: 30px;
+  }
+  &__item-name{
+    display: inline-block;
+    padding-left: 13px;
+    position: relative;
+    @include before_circle;
+    &:before {
+      top: -38%;
+    }
+  }
+  &__item-percent {
+    display: inline-block;
+  }
+  &__item-top {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__item-scale {
+    position: relative;
+    margin-top: 27px;
+    width: 100%;
+    height: 14px;
+    background: #E8E4DE;
+    border-radius: 4px;
+    z-index: -1;
+    &-color{
+      position: absolute;
+      background-color: $main-color;
+      z-index: 3;
+      height: 14px;
+    }
+  }
+}
