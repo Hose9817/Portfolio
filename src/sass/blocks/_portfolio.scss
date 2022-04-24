@@ -21,8 +21,9 @@
     }
     &:hover {
       transform: scale(1.05);
-      //filter: brightness(30%);
+      //filter: brightness(70%);
       //filter: grayscale(70%);
+      //filter: blur(3px);
     }
   }
 }
