@@ -1,5 +1,5 @@
 .resume {
-  padding: 120px;
+  padding: 120px 0;
 
   &__wrapper {
     margin-top: 60px;
@@ -75,7 +75,8 @@
 
     &-icon {
       position: absolute;
-      bottom: 0;
+      //bottom: 0;
+      top: 65px;
       left: 60px;
       @include before_circle;
 
