@@ -2,7 +2,7 @@
   padding: 65px 0 120px 0;
   &__wrapper {
     margin-top: 60px;
-    padding: 0 50px 0 50px;
+    padding: 0 50px;
     display: grid;
     grid-template: repeat(3, 45px) / repeat(2, 365px);
     grid-auto-rows: 45px;

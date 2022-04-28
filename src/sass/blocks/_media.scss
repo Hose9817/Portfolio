@@ -6,15 +6,15 @@
   .skill {
     &__block {
       margin-top: 50px;
-      grid-template-columns: repeat(4, 260px);
-      grid-template-rows: repeat(2, 260px);
-      gap: 10px;
-      justify-content: center;
+      grid-template-columns: repeat(auto-fit, 270px);
+      //grid-template-rows: repeat(2, 260px);
+      //gap: 10px;
+      justify-content: space-around;
     }
 
-    &__item {
-      padding: 20px;
-    }
+    //&__item {
+    //  padding: 20px;
+    //}
   }
 
 }
@@ -48,18 +48,41 @@
     }
   }
 
-  .skill {
-    &__block {
-      grid-template-columns: repeat(3, 260px);
-      grid-template-rows: repeat(3, 260px);
-    }
-  }
+  //.skill {
+  //  &__block {
+  //    grid-template-columns: repeat(3, 260px);
+  //    grid-template-rows: repeat(3, 260px);
+  //  }
+  //}
 
   .progress__block {
     margin: 80px 0;
-    grid-template-columns: repeat(3, minmax(290px, auto));
-    column-gap: 20px
+    grid-template-columns: repeat(auto-fit, minmax(304px, auto));
+    grid-auto-rows: minmax(70px, auto);
+    column-gap: 20px;
+    //padding: 0 20px;
   }
+
+  .portfolio {
+    &__wrapper {
+      grid-template-columns: repeat(auto-fit, 280px);
+      grid-auto-rows: 280px;
+      justify-content: space-evenly;
+      row-gap: 35px;
+
+      .horizontal, .vertical {
+        grid-row: unset;
+        grid-column: unset;
+
+        img {
+          object-fit: cover;
+          height: 100%;
+          width: 100%;
+        }
+      }
+    }
+  }
+
 }
 
 
@@ -98,18 +121,15 @@
     }
   }
 
-  .skill {
-    &__block {
-      grid-template-columns: repeat(3, 230px);
-      grid-template-rows: repeat(3, 230px);
-    }
-    &__item {
-      padding: 10px;
-    }
-  }
+  .price {
+    padding: 40px 0 60px 0;
 
-  .progress__block {
-    grid-template-columns: repeat(3, minmax(200px, auto));
+    &__wrapper {
+      margin-top: 40px;
+      grid-template-columns: repeat(auto-fit, 365px);
+      justify-content: space-around;
+      row-gap: 25px;
+    }
   }
 
 }
@@ -164,15 +184,10 @@
     }
   }
 
-  .skill {
-    &__block {
-      grid-template-columns: repeat(2, 230px);
-      grid-template-rows: repeat(4, 230px);
+  .price {
+    &__wrapper {
+      margin-top: 25px;
     }
-  }
-
-  .progress__block {
-    grid-template-columns: repeat(2, minmax(200px, auto));
   }
 
 }
@@ -234,7 +249,7 @@
     padding: 40px 0;
 
     &__wrapper {
-      grid-template-columns: 310px;
+      grid-template-columns: 300px;
       gap: unset;
       //margin-top: 40px;
     }
@@ -249,20 +264,23 @@
   }
 
   .skill {
-    &__block {
-      grid-template-columns: 270px;
-      grid-template-rows: unset;
-      grid-auto-rows: 270px;
-    }
-    &__item {
-      padding: 30px 30px 25px 30px;
+    .progress__block {
+      margin-bottom: 40px;
     }
   }
 
-  .progress__block {
-    margin-top: 40px;
-    grid-template-columns: minmax(200px, auto);
-    gap: 40px;
+  .portfolio {
+    &__wrapper {
+      margin-top: 40px;
+    }
+  }
+
+  .price {
+    &__wrapper {
+      grid-template-columns: repeat(auto-fit, 300px);
+      grid-template-rows: minmax(45px, auto);
+      grid-auto-rows: minmax(45px, auto);
+    }
   }
 
 }
